@@ -1,12 +1,15 @@
+import Footer from "../components/footer";
+import Header from "../components/header";
+
 function SobreMim() {
   return (
-  
-  
-  <h1 className="text-5xl font-bold text-blue-800 text-left">Sobre Mim</h1>
-  
-
-
-
+    <main className="min-h-screen"> 
+       <Header texto="Sobre Mim!"></Header> 
+      <section className="">
+        
+      </section>
+      <Footer></Footer>
+    </main>
 )
 }
 
