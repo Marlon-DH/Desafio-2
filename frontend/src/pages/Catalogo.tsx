@@ -7,54 +7,47 @@ import Kaguya from "../assets/Kaguya.webp"
 import YourLie from "../assets/YourLie.jpg"
 import Oregairo from "../assets/Oregairu.jpg"
 
+
+
+
 function Catalogo() {
+
+  const links =[
+        {nome: "Clannad: After Story", top: "TOP 1", img: Clannad, link: 'https://myanimelist.net/anime/4181/Clannad__After_Story?q=Clannad&cat=anime' }, 
+        {nome: "Yahari Ore no Seishun Love...", top: "TOP 2", img: Oregairo, link: 'https://myanimelist.net/anime/14813/Yahari_Ore_no_Seishun_Love_Comedy_wa_Machigatteiru?q=Yahari%20Ore%20no%20Seishun%20Love%20Comedy&cat=anime'},
+        {nome: "Shigatsu wa Kimi no Uso", top: "TOP 3", img: YourLie, link: 'https://myanimelist.net/anime/32281/Kimi_no_Na_wa?q=Your&cat=anime  '},
+        {nome: "Kaguya-sama: Love is War", top: "TOP 4", img: Kaguya, link: 'https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen?q=Kaguya-sama&cat=anime'},
+  ];
+  
   return (
     <main className="flex justify-center text-center flex-col ">
       <Header texto="Catálogo dos top 4 Animes de Romance!!"></Header>
+      <h1 className="mt-10 text-2xl mb-3 text-blue-900 justify-self-center">Top 4 animes baseado na minha experiencia assistindo cada um</h1>
       <section className="flex justify-center flex-col ">
         <div className="flex justify-center">
-        <Card
-          srcc={Clannad}
-          texto="TOP 1"
-          texto2="Clannad: After Story"
+        { links.map((link) => 
+        (
+          <Card
+          srcc={link.img}
+          texto={link.top}
+          texto2={link.nome}
           hover="hover:border-blue-800 
                  hover:w-75 
                  hover:h-105"
-        ></Card>
-        <Card
-          srcc={Oregairo}
-          texto="TOP 2"
-          texto2="Yahari Ore no Seishun Love Comedy wa Machigatteiru"
-          hover="hover:border-blue-800 
-                 hover:w-75 
-                 hover:h-105"
-        ></Card>
-        <Card
-          srcc={YourLie}
-          texto="TOP 3"
-          texto2="Shigatsu wa Kimi no Uso"
-          hover="hover:border-blue-800 
-                 hover:w-75 
-                 hover:h-105"
-        ></Card>
-        <Card
-          srcc={Kaguya}
-          texto="TOP 4"
-          texto2="Kaguya-sama: Love is War"
-          hover="hover:border-blue-800 
-                 hover:w-75 
-                 hover:h-105"
-        ></Card>
+          link={link.link}
+        ></Card> 
+        ))}
+  
         </div>
        
       
       </section>
       <Footer
-      margin="mt-51"
+      margin="mt-10"
       ></Footer>
     </main>
     
   )
 }
 
-export default Catalogo;
+export default Catalogo
