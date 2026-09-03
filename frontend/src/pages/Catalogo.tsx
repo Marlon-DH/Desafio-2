@@ -8,8 +8,6 @@ import YourLie from "../assets/YourLie.jpg"
 import Oregairo from "../assets/Oregairu.jpg"
 
 
-
-
 function Catalogo() {
 
   const links =[
@@ -42,8 +40,28 @@ function Catalogo() {
        
       
       </section>
+      <section className=" mt-5 border border-[1px] border-amber-100 bg-amber-50">
+        <Header texto="Mais Informações"></Header>
+
+        <div className="flex flex-col justify-self-center">
+          { links.map((link) => 
+        (
+          <Card
+          srcc={link.img}
+          texto={link.top}
+          texto2={link.nome}
+          hover="hover:border-blue-800 
+                 w-140 
+                 h-105
+                 mt-5"
+          link={link.link}
+        ></Card> 
+        ))}
+        </div>
+
+      </section>
       <Footer
-      margin="mt-10"
+      margin="mt-15"
       ></Footer>
     </main>
     

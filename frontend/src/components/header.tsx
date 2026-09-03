@@ -4,7 +4,7 @@ type headerProps = {
 
 function header({texto}: headerProps){
     return(
-        <div className="flex justify-center mt-2">
+        <div className="flex justify-center mt-15">
             <h1 className="text-5xl font-bold text-blue-800 ">
             {texto}
             </h1>  
