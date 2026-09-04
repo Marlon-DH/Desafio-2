@@ -1,5 +1,5 @@
 type ButtonProps = {
-    texto: string
+    texto: any
     cor: string
     hover: string
 }

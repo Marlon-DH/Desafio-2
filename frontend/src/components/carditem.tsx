@@ -7,7 +7,7 @@ type CardProps = {
     texto2: string
     hover: string
     link: string
-} 
+} ;
 
 function Card({srcc, texto, texto2, hover, link}: CardProps) {
     

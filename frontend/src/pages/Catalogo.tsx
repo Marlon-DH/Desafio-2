@@ -10,6 +10,7 @@ import Card2 from "../components/cardinfo"
 
 
 
+
 function Catalogo() {
 
   const links =[
@@ -19,7 +20,7 @@ function Catalogo() {
         {nome: "Kaguya-sama: Love is War", top: "TOP 4", img: Kaguya, link: 'https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen?q=Kaguya-sama&cat=anime'},
   ];
 
-  const clannadInfo = <p>Tipo: TV <br />
+  const clannadInfo =       [<p>Tipo: TV <br />
                         Episódios: 24 <br />
                         Status: Exibição concluída <br />
                         Exibido: 3 de outubro de 2008 a 27 de março de 2009 <br />
@@ -31,12 +32,22 @@ function Catalogo() {
                         Fonte: Visual novel <br />
                         Gêneros: Drama , Romance <br /> 
                         Duração: 24 min. por episódio. <br /> 
-                        Classificação: PG-13 - Adolescentes a partir de 13 anos </p>
+                        Classificação: PG-13 - Adolescentes a partir de 13 anos </p>];
+
+  const clannadSinopse =       [<span>
+                        Tomoya Okazaki e Nagisa Furukawa se formaram no ensino médio e, juntos, vivenciam a montanha-russa emocional da adolescência. Incapaz de decidir qual  rumo dar ao seu futuro, Tomoya aprende o valor de uma forte ética de trabalho e descobre a força do apoio de Nagisa. Através da dedicação e da união de propósitos do casal, eles seguem em frente para enfrentar seus problemas pessoais, aprofundar seus relacionamentos antigos e criar novos laços.
+                        <br /> <br />
+                        O tempo também avança no Mundo Ilusório. Conforme as planícies esfriam com a aproximação do inverno, a Garota Ilusória e a Boneca de Lixo se deparam com uma situação difícil que revela o verdadeiro propósito do Mundo.
+                        <br /> <br />
+                        [Escrito por MAL Rewrite]</span>];
+  
+
+
   
   return (
     <main className="flex justify-center text-center flex-col ">
       <Header texto="Catálogo dos top 4 Animes de Romance!!"></Header>
-      <h1 className="mt-10 text-2xl mb-3 text-blue-900 justify-self-center">Top 4 animes baseado na minha experiencia assistindo cada um</h1>
+      <h1 className="mt-10 text-2xl mb-3 text-blue-900 justify-self-center">Top 4 animes baseado na minha experiencia assistindo cada um!</h1>
       <section className="flex justify-center flex-col ">
         <div className="flex justify-center">
         { links.map((link) => 
@@ -56,19 +67,23 @@ function Catalogo() {
        
       
       </section>
-      <section className=" mt-5  border-[1px] border-amber-100 bg-amber-50">
+      <section className=" mt-5 bg-amber-50">
         <Header texto="Mais Informações"></Header>
+        <b>(MyAnimeList)</b>
 
         <div className="flex flex-col justify-self-center">
+          
           <Card2
           srcc={Clannad}
           texto="CLANNAD〜AFTER STORY〜"
           texto2= {clannadInfo}
+          texto3= {clannadSinopse}
           hover="hover:border-blue-800 
                  w-140 
                  h-105
                  mt-5"
         ></Card2> 
+
         </div>
 
       </section>

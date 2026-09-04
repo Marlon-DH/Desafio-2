@@ -3,10 +3,11 @@ type CardProps = {
     srcc: string
     texto: string
     texto2: string
+    texto3: string
     hover: string
 } 
 
-function Card2 ({srcc, texto, texto2, hover}: CardProps) {
+function Card2 ({srcc, texto, texto2, texto3, hover}: CardProps) {
     
 
     return(
@@ -20,14 +21,26 @@ function Card2 ({srcc, texto, texto2, hover}: CardProps) {
             </div>
         </div>
         <div className="flex flex-col ">
-            <h1>Sinopse</h1>
-            <p>Tomoya Okazaki e Nagisa Furukawa se formaram no ensino médio e, juntos, vivenciam a montanha-russa emocional da adolescência. Incapaz de decidir qual rumo dar ao seu futuro, Tomoya aprende o valor de uma forte ética de trabalho e descobre a força do apoio de Nagisa. Através da dedicação e da união de propósitos do casal, eles seguem em frente para enfrentar seus problemas pessoais, aprofundar seus relacionamentos antigos e criar novos laços.
-            <br />
-            O tempo também avança no Mundo Ilusório. Conforme as planícies esfriam com a aproximação do inverno, a Garota Ilusória e a Boneca de Lixo se deparam com uma situação difícil que revela o verdadeiro propósito do Mundo.
-            <br />
-            [Escrito por MAL Rewrite]</p>
+            <div className=" flex w-160 h-20 bg-blue-100 self-center mt-2 border rounded-2xl border-amber-50">
+                <div className="mt-1.5 flex flex-col ">   
+                    <p className="font-extrabold">Nota</p> 
+                    <b className="font-extrabold ml-6 text-[30px]">8,93✨</b>   
+                </div>
+                <div className="ml-3 flex flex-col">
+                    <span>|</span>
+                    <span>|</span>
+                    <span>|</span>
+                </div>
+                <div className="p-6.5 flex ">
+                    <p className="">Ranked #19</p>
+                    <p className=" ml-4 mr-4">Popularity #125</p>
+                    <p className=" ">Members 1,299,451</p>
+                </div>
+            </div> 
+            <b className="mt-3">Sinopse</b>
+            <p className="p-6 pt-0 text-start">{texto3}</p>
         </div>    
-            
+          
         </div>
     )
 }
