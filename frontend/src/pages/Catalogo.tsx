@@ -6,6 +6,8 @@ import Clannad from "../assets/Clannad.jpg"
 import Kaguya from "../assets/Kaguya.webp"
 import YourLie from "../assets/YourLie.jpg"
 import Oregairo from "../assets/Oregairu.jpg"
+import Card2 from "../components/cardinfo"
+
 
 
 function Catalogo() {
@@ -16,6 +18,20 @@ function Catalogo() {
         {nome: "Shigatsu wa Kimi no Uso", top: "TOP 3", img: YourLie, link: 'https://myanimelist.net/anime/32281/Kimi_no_Na_wa?q=Your&cat=anime  '},
         {nome: "Kaguya-sama: Love is War", top: "TOP 4", img: Kaguya, link: 'https://myanimelist.net/anime/37999/Kaguya-sama_wa_Kokurasetai__Tensai-tachi_no_Renai_Zunousen?q=Kaguya-sama&cat=anime'},
   ];
+
+  const clannadInfo = <p>Tipo: TV <br />
+                        Episódios: 24 <br />
+                        Status: Exibição concluída <br />
+                        Exibido: 3 de outubro de 2008 a 27 de março de 2009 <br />
+                        Estreou no outono de 2008. <br />
+                        Transmissão: Sextas-feiras às 01:59 (JST) <br />
+                        Produtores: Pony Canyon , TBS , Rakuonsha , Animation Do <br />
+                        Licenciadores: Sentai Filmworks <br />
+                        Estúdios: Kyoto Animation <br />
+                        Fonte: Visual novel <br />
+                        Gêneros: Drama , Romance <br /> 
+                        Duração: 24 min. por episódio. <br /> 
+                        Classificação: PG-13 - Adolescentes a partir de 13 anos </p>
   
   return (
     <main className="flex justify-center text-center flex-col ">
@@ -40,23 +56,19 @@ function Catalogo() {
        
       
       </section>
-      <section className=" mt-5 border border-[1px] border-amber-100 bg-amber-50">
+      <section className=" mt-5  border-[1px] border-amber-100 bg-amber-50">
         <Header texto="Mais Informações"></Header>
 
         <div className="flex flex-col justify-self-center">
-          { links.map((link) => 
-        (
-          <Card
-          srcc={link.img}
-          texto={link.top}
-          texto2={link.nome}
+          <Card2
+          srcc={Clannad}
+          texto="CLANNAD〜AFTER STORY〜"
+          texto2= {clannadInfo}
           hover="hover:border-blue-800 
                  w-140 
                  h-105
                  mt-5"
-          link={link.link}
-        ></Card> 
-        ))}
+        ></Card2> 
         </div>
 
       </section>
