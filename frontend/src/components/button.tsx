@@ -1,12 +1,16 @@
+import type { MouseEventHandler, ReactNode } from 'react'
+
 type ButtonProps = {
-    texto: any
+    texto: ReactNode
     cor: string
     hover: string
+    tamanho: string
+    click: MouseEventHandler<HTMLButtonElement>
 }
 
-function Button({ texto, cor, hover }: ButtonProps){
+function Button({ texto, cor, hover, tamanho, click }: ButtonProps){
    return(
-        <button className={`text-white ${cor} px-3 py-2 border border-gray-400 rounded-lg ${hover} `}>
+        <button onClick={click} className={`text-white ${cor} px-3 py-2 border border-gray-400 rounded-lg ${tamanho} ${hover} `}>
             {texto}
         </button>
     );

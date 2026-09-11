@@ -5,9 +5,11 @@ import Header from "../components/header"
 import Button from "../components/button"
 import Footer from "../components/footer"
 import Card from "../components/carditem"
-import { Link } from "react-router"
+import { useNavigate } from "react-router"
 
 function Inicial() {
+  const navigate = useNavigate()
+
   return (
     <main className="">
       <Header texto="Bem Vindo!!!"></Header>
@@ -20,19 +22,21 @@ function Inicial() {
       </div>
       <div className=" flex justify-center">
         <Button
-          texto={<Link to="/Catalogo" >Ver o top 4</Link>}
+          texto="Ver o top 4"
           cor="bg-blue-800"
           hover="hover:bg-blue-500"
-          
+          tamanho=""
+          click={() => navigate("/Catalogo")}
         ></Button>
 
         <img src={YouImg} alt="SIM" className="rounded-lg" />
         
         <Button
-          texto={<Link to="/Catalogo" >Ver o top 4</Link>}
+          texto="Ver o top 4"
           cor="bg-blue-800"
           hover="hover:bg-blue-500"
-          
+          tamanho=""
+          click={() => navigate("/Catalogo")}
         ></Button>
       </div>
       <div className="mt-10 flex justify-center text-center">

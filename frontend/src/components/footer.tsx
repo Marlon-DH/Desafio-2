@@ -12,7 +12,7 @@ function Footer({ margin }: FooterProps) {
         <footer className={`bg-blue-600 min-w-screen ${margin} h-30 `}>
         
             <div className="flex ">
-                <img src={Logo} className="h-10 w-15 m-[5px]"/>
+                <img src={Logo} className="h-10 w-15 m-1.25"/>
                 <div className="flex gap-2 mr-30 text-amber-50 pt-2.5 justify-center w-screen">
                     <div className="flex flex-col mr-90">
                         <b className="">Navegação</b>
